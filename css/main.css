@@ -660,12 +660,12 @@ img {
   padding-top: 118px;
   padding-bottom: 118px;
 }
-
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
     background-image: url(../../images/mobile/hero-mob@x2.jpg);
   }
 }
+
 .hero__title {
   font-weight: 900;
   font-size: 44px;
