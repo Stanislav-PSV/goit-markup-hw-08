@@ -14,6 +14,7 @@
   }
   @media screen and (min-width: 1200px) {
     display: flex;
+    align-items: baseline;
   }
 }
 .footer-logo {
@@ -26,8 +27,8 @@
 .footer-logo__studio {
   color: var(--second-color);
 }
-.footer-contacts__item {
-  padding-bottom: 9px;
+.footer-contacts__item :not(:last-child) {
+  margin-bottom: 8px;
 }
 .footer-contacts__link-addres {
   font-style: normal;
@@ -64,9 +65,6 @@
   }
 }
 .footer-social {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 60px;
-  }
   @media screen and (min-width: 1200px) {
     margin-left: 70px;
   }
@@ -88,8 +86,10 @@
 }
 
 .footer-forms {
-  align-items: center;
-  text-align: center;
+  @media screen and (max-width: 1199px) {
+    align-items: center;
+    text-align: center;
+  }
   @media screen and (min-width: 1200px) {
     margin-left: 95px;
   }
@@ -144,15 +144,9 @@
   color: rgba(255, 255, 255, 0.6);
 }
 .form__btn {
-  margin-left: 15px;
-  @media screen and (max-width: 767px) {
-    margin-left: 135px;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    margin-left: 270px;
-  }
-  @media screen and (max-width: 479px) {
-    margin-left: auto;
+  margin: 0 auto;
+  @media screen and (min-width: 1200px) {
+    margin-left: 15px;
   }
 }
 .form__icon-send {

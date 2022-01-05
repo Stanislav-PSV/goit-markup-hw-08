@@ -7,3 +7,9 @@
   color: var(--мain-color);
   margin-bottom: 50px;
 }
+@media screen and (max-width: 1199px) {
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
