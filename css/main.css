@@ -493,7 +493,7 @@ img {
 }
 @media screen and (max-width: 479px) {
   .mobile-contacts__tel {
-    font-size: 28px;
+    font-size: 26px;
     line-height: 1.16;
   }
 }
@@ -683,8 +683,16 @@ img {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/hero-tablet.jpg);
+  padding-top: 118px;
+  padding-bottom: 118px;
 }
 
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/hero-tablet@x2.jpg);
+  }
+}
 .hero__title {
   font-weight: 900;
   font-size: 44px;
@@ -706,18 +714,6 @@ img {
 @media screen and (max-width: 1199px) {
   .hero__title {
     font-size: 26px;
-  }
-}
-@media screen and (min-width: 480px) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/hero-tablet.jpg);
-    padding-top: 118px;
-    padding-bottom: 118px;
-  }
-}
-@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/hero-tablet@x2.jpg);
   }
 }
 @media screen and (min-width: 768px) {
@@ -892,6 +888,7 @@ img {
 @media screen and (max-width: 479px) {
   .team__item:not(:last-child) {
     margin-bottom: 15px;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 480px) {
@@ -1179,10 +1176,10 @@ img {
 }
 
 .filters {
-  margin: -15px;
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
+  margin: -15px;
 }
 @media screen and (max-width: 767px) {
   .filters {
@@ -1232,15 +1229,23 @@ img {
 }
 
 .portfolio {
-  margin: -15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: -15px;
 }
 
 .portfolio__item {
   width: 450px;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 479px) {
+  .portfolio__item {
+    width: 370px;
+  }
+  .portfolio__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .portfolio__item {
