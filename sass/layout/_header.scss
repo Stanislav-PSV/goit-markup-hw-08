@@ -38,11 +38,17 @@
   }
 }
 .header__logo {
+  @media (max-width: 767px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
   @media (min-width: 768px) {
     margin-right: 85px;
   }
   @media (min-width: 1200px) {
     margin-right: 95px;
+    padding-top: 24px;
+    padding-bottom: 25px;
   }
 }
 .header__logo {

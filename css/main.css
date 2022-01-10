@@ -26,7 +26,7 @@ button {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -171,6 +171,11 @@ img {
   top: 0;
   transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (max-width: 469px) {
+  .backdrop {
+    padding: 93px 15px;
+  }
+}
 
 .modal {
   width: 528px;
@@ -178,18 +183,24 @@ img {
   background-color: var(--second-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  position: absolute;
   padding: 37px 38px 43px 42px;
-  top: 50%;
-  left: 50%;
   transform: scale(1) rotate(0);
-  transform: translate(-50%, -50%);
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (max-width: 1199px) {
   .modal {
     width: 450px;
     min-height: 609px;
+  }
+}
+@media screen and (min-width: 450px) {
+  .modal {
+    width: 450px;
+    min-height: 609px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 @media screen and (max-width: 479px) {
@@ -545,6 +556,11 @@ img {
   }
 }
 
+.mobile-menu__active {
+  content: "";
+  color: var(--accent-color);
+}
+
 .header {
   background-color: var(--second-color);
   border-bottom: 1px solid #eeeeee;
@@ -594,6 +610,12 @@ img {
   }
 }
 
+@media (max-width: 767px) {
+  .header__logo {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
 @media (min-width: 768px) {
   .header__logo {
     margin-right: 85px;
@@ -602,6 +624,8 @@ img {
 @media (min-width: 1200px) {
   .header__logo {
     margin-right: 95px;
+    padding-top: 24px;
+    padding-bottom: 25px;
   }
 }
 
@@ -683,14 +707,14 @@ img {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/hero-tablet.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/hero-mob.jpg);
   padding-top: 118px;
   padding-bottom: 118px;
 }
 
 @media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/hero-tablet@x2.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/hero-mob@x2.jpg);
   }
 }
 .hero__title {
@@ -888,12 +912,11 @@ img {
 @media screen and (max-width: 479px) {
   .team__item:not(:last-child) {
     margin-bottom: 15px;
-    margin: 0 auto;
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .team__item:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1016,7 +1039,7 @@ img {
   color: var(--second-color);
 }
 
-.footer-contacts__item :not(:last-child) {
+.footer-contacts__item:not(:last-child) {
   margin-bottom: 8px;
 }
 
@@ -1179,7 +1202,6 @@ img {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-  margin: -15px;
 }
 @media screen and (max-width: 767px) {
   .filters {
@@ -1204,6 +1226,11 @@ img {
   margin-right: 8px;
 }
 
+@media screen and (min-width: 480px) {
+  .filters__item--margin {
+    margin-bottom: 0px;
+  }
+}
 .filters__btn {
   font-weight: 500;
   font-size: 16px;
@@ -1232,7 +1259,11 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: -15px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio {
+    margin: -15px;
+  }
 }
 
 .portfolio__item {

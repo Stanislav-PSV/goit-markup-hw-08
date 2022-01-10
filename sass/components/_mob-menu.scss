@@ -138,3 +138,7 @@
     margin-left: 3px;
   }
 }
+.mobile-menu__active {
+  content: "";
+  color: var(--accent-color);
+}
